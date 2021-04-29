@@ -1,6 +1,16 @@
 let c=document.getElementById("my-canvas");
 let ctx=c.getContext("2d");
 
+// let make_base=()=>{
+//     base_image = new Image();
+//     base_image.src = 'images/background.jpg';
+//     base_image.onload = ()=>{
+//       ctx.drawImage(base_image, 0, 0,1000,500);
+//     };
+//   };
+  
+// make_base();
+
 let loadImage=(src,callback)=>{
     let myImg=document.createElement("img");
     //let myImg=new Image();
@@ -8,6 +18,9 @@ let loadImage=(src,callback)=>{
     myImg.onload=()=>callback(myImg);
     myImg.src=src;
 };
+
+
+
 
 //settting the path for the images.
 let imagePath=(frameNumber,animation)=>{
